@@ -1,10 +1,13 @@
 import React from "react"
+import Peoples from "./components/peoples"
+import JoinedRoomCard from "./components/joined-room"
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-row h-screen mx-7 mt-7">
-      <div className="flex flex-col w-64">MeloMix</div>
+    <div className="flex flex-row mx-14 mt-12 gap-24">
+      <Peoples />
       {children}
+      <JoinedRoomCard />
     </div>
   )
 }

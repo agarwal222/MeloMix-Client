@@ -14,7 +14,12 @@ export default function NavBar() {
       </div>
       <div className="w-full max-w-2xl" id="searchbar">
         {!isMobile && (
-          <Input placeholder="Search" startIcon={Search} type="search" />
+          <Input
+            placeholder="Search"
+            startIcon={Search}
+            type="search"
+            className="bg-transparent"
+          />
         )}
       </div>
       <div className="flex flex-row items-center gap-5" id="right_menu">
