@@ -5,7 +5,7 @@ import React from "react"
 export default function JoinedRoomCard() {
   const roomJoined = false
   return (
-    <div className="min-w-[280px]">
+    <div className="hidden lg:block sticky top-28 h-full lg:min-w-[280px]">
       {roomJoined ? (
         "joined"
       ) : (

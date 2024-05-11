@@ -8,11 +8,11 @@ import { useGlobule } from "@/context/useGlobule"
 export default function NavBar() {
   const { isMobile } = useGlobule()
   return (
-    <nav className="w-full px-16 py-2 my-2 flex flex-row justify-between items-center">
+    <header className="sticky top-0 z-50 w-full px-16 py-5 flex flex-row justify-between items-center bg-background">
       <div className="flex flex-row" id="logo">
         <h1 className="text-2xl font-bold">MeloMix</h1>
       </div>
-      <div className="w-full max-w-2xl" id="searchbar">
+      <div className="w-full max-w-sm lg:max-w-2xl" id="searchbar">
         {!isMobile && (
           <Input
             placeholder="Search"
@@ -34,6 +34,6 @@ export default function NavBar() {
           </Avatar>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }

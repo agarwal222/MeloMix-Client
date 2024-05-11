@@ -10,7 +10,7 @@ export default function People() {
         <AvatarFallback>UT</AvatarFallback>
       </Avatar>
       <div className="flex flex-col">
-        <strong>Utkarsh Tiwari</strong>
+        <strong>Utkarsh Agarwal</strong>
         <p>room name</p>
       </div>
     </div>
