@@ -30,6 +30,8 @@
   .dark {
     --background: 210 21% 5%;
     --foreground: 0 0% 98%;
+    --text-primary: 215 22% 89%;
+    --text-secondary: 215 22% 46%;
     --card: 215 22% 11%;
     --card-foreground: 0 0% 98%;
     --card-border: 215 22% 11%;

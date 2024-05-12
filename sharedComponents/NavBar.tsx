@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Bell, Search } from "lucide-react"
 import { useGlobule } from "@/context/useGlobule"
+import { iconFill } from "@/constants/colors"
 
 export default function NavBar() {
   const { isMobile } = useGlobule()
@@ -18,14 +19,14 @@ export default function NavBar() {
             placeholder="Search"
             startIcon={Search}
             type="search"
-            className="bg-transparent"
+            className="bg-input"
           />
         )}
       </div>
       <div className="flex flex-row items-center gap-5" id="right_menu">
         <div className="flex flex-row items-center gap-3" id="icons">
-          {isMobile && <Search size={18} />}
-          <Bell size={18} />
+          {isMobile && <Search fill={iconFill} stroke={iconFill} size={24} />}
+          <Bell fill={iconFill} stroke={iconFill} size={24} />
         </div>
         <div className="w-full max-w-2xl" id="avatar">
           <Avatar>

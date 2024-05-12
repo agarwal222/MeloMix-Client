@@ -5,7 +5,7 @@ import RoomCard from "./components/room-card"
 
 export default function Dashboard() {
   return (
-    <div className="grow px-7 lg:px-14">
+    <div className="grow shrink-1 px-7 lx:px-14">
       <div className="sticky bg-background z-50 top-[81px] py-5 flex flex-row justify-between items-center">
         <h2 className="text-2xl font-bold">For You</h2>
         <Button className="gap-2">
