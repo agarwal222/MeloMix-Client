@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -8,10 +7,25 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card"
+import AvatarSet from "@/sharedComponents/avatar-set"
 import { AudioWaveform, Dot, Headphones } from "lucide-react"
 import React from "react"
 
 export default function RoomCard() {
+  const avatarArr = [
+    {
+      url: "https://github.com/shadcn.png",
+      fallback: "UT",
+    },
+    {
+      url: "https://github.com/shadcn.png",
+      fallback: "UT",
+    },
+    {
+      url: "https://github.com/shadcn.png",
+      fallback: "UT",
+    },
+  ]
   return (
     <Card className="bg-card flex flex-col justify-center border-card-border py-3 px-3">
       <CardHeader className="flex flex-row justify-between items-center py-2">
@@ -25,10 +39,7 @@ export default function RoomCard() {
         </span>
       </CardHeader>
       <CardContent className="flex flex-row items-center gap-2 pb-3">
-        <Avatar className="w-4 h-4">
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>UT</AvatarFallback>
-        </Avatar>
+        <AvatarSet avatarArr={avatarArr} />
         <CardDescription className="text-sm text-text-secondary">
           Utkarsh Agarwal, Satoshi, Shadcn...
         </CardDescription>

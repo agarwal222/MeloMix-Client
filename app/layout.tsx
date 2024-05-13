@@ -4,6 +4,7 @@ import "./globals.css"
 import NavBar from "../sharedComponents/NavBar"
 import { ThemeProvider } from "@/components/theme-provider"
 import GlobuleProvider from "@/context/useGlobule"
+import Footer from "@/sharedComponents/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           >
             <NavBar />
             {children}
+            <Footer />
           </ThemeProvider>
         </GlobuleProvider>
       </body>
