@@ -1,8 +1,8 @@
 import React from "react"
 import { Input } from "@/components/ui/input"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Bell, Search } from "lucide-react"
 import { iconFill } from "@/constants/colors"
+import AvatarSet from "./avatar-set"
 
 export default function NavBar() {
   return (
@@ -10,7 +10,6 @@ export default function NavBar() {
       <div className="flex flex-row" id="logo">
         <h1 className="text-2xl font-bold">MeloMix</h1>
       </div>
-
       <div
         className="hidden lg:block w-full max-w-sm lg:max-w-2xl"
         id="searchbar"
@@ -33,10 +32,12 @@ export default function NavBar() {
           <Bell fill={iconFill} stroke={iconFill} size={24} />
         </div>
         <div className="hidden lg:block w-full max-w-2xl" id="avatar">
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-            <AvatarFallback>UT</AvatarFallback>
-          </Avatar>
+          <AvatarSet
+            avatarArr={[
+              { url: "https://github.com/shadcn.png", fallback: "UT" },
+            ]}
+            variant="md"
+          />
         </div>
       </div>
     </header>

@@ -1,15 +1,15 @@
 "use client"
 import React from "react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import AvatarSet from "@/sharedComponents/avatar-set"
 
 export default function People() {
   return (
     <div className="flex items-center gap-4">
-      <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>UT</AvatarFallback>
-      </Avatar>
+      <AvatarSet
+        avatarArr={[{ url: "https://github.com/shadcn.png", fallback: "UT" }]}
+        variant="md"
+      />
       <div className="flex flex-col">
         <strong className="text-sm">Utkarsh Agarwal</strong>
         <Button

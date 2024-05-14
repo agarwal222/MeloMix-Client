@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import React from "react"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -8,8 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import AvatarSet from "@/sharedComponents/avatar-set"
 import { Activity, AudioWaveform, Dot, Headphones } from "lucide-react"
-import React from "react"
 
 export function JoinedRoomCardDesktop() {
   const roomJoined = false
@@ -48,10 +48,12 @@ export function JoinedRoomCardMobile() {
             </span>
           </CardHeader>
           <CardContent className="flex flex-row items-center gap-3 pb-6 pt-3">
-            <Avatar className="w-12 h-12">
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback>UT</AvatarFallback>
-            </Avatar>
+            <AvatarSet
+              avatarArr={[
+                { url: "https://github.com/shadcn.png", fallback: "UT" },
+              ]}
+              variant="md"
+            />
             <div className="flex flex-col gap-1">
               <CardDescription className="text-sm text-text-secondary">
                 Hosted by

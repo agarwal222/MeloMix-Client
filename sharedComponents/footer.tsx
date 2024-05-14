@@ -1,7 +1,7 @@
 import { iconFill } from "@/constants/colors"
-import { Activity, DiamondPlus, Home, Radio, Users } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Activity, DiamondPlus, Home, Radio } from "lucide-react"
 import React from "react"
+import AvatarSet from "./avatar-set"
 
 export default function Footer() {
   return (
@@ -11,10 +11,9 @@ export default function Footer() {
         <Radio size={24} stroke={iconFill} />
         <DiamondPlus size={24} stroke={iconFill} />
         <Activity size={24} stroke={iconFill} />
-        <Avatar className="w-6 h-6">
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>UT</AvatarFallback>
-        </Avatar>
+        <AvatarSet
+          avatarArr={[{ url: "https://github.com/shadcn.png", fallback: "UT" }]}
+        />
       </div>
     </footer>
   )
