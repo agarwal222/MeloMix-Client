@@ -52,7 +52,7 @@ export function JoinedRoomCardMobile() {
               avatarArr={[
                 { url: "https://github.com/shadcn.png", fallback: "UT" },
               ]}
-              variant="md"
+              variant="lg"
             />
             <div className="flex flex-col gap-1">
               <CardDescription className="text-sm text-text-secondary">

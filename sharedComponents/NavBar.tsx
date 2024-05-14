@@ -36,7 +36,7 @@ export default function NavBar() {
             avatarArr={[
               { url: "https://github.com/shadcn.png", fallback: "UT" },
             ]}
-            variant="md"
+            variant="lmd"
           />
         </div>
       </div>

@@ -6,7 +6,7 @@ interface AvatarSetProps {
   avatarArr: AvatarArr[]
 }
 
-type Variant = "lg" | "md" | "sm"
+type Variant = "xl" | "lg" | "lmd" | "md" | "sm"
 
 type AvatarArr = {
   url: string
@@ -14,8 +14,26 @@ type AvatarArr = {
 }
 
 export default function AvatarSet({ variant, avatarArr }: AvatarSetProps) {
-  const w = variant === "lg" ? 80 : variant === "md" ? 40 : 20
-  const h = variant === "lg" ? 80 : variant === "md" ? 40 : 20
+  const w =
+    variant === "xl"
+      ? 80
+      : variant === "lg"
+      ? 50
+      : variant === "lmd"
+      ? 40
+      : variant === "md"
+      ? 30
+      : 20
+  const h =
+    variant === "xl"
+      ? 80
+      : variant === "lg"
+      ? 50
+      : variant === "lmd"
+      ? 40
+      : variant === "md"
+      ? 30
+      : 20
   if (avatarArr.length === 1) {
     return (
       <Avatar

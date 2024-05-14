@@ -8,7 +8,7 @@ export default function People() {
     <div className="flex items-center gap-4">
       <AvatarSet
         avatarArr={[{ url: "https://github.com/shadcn.png", fallback: "UT" }]}
-        variant="md"
+        variant="lmd"
       />
       <div className="flex flex-col">
         <strong className="text-sm">Utkarsh Agarwal</strong>

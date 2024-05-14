@@ -13,6 +13,7 @@ export default function Footer() {
         <Activity size={24} stroke={iconFill} />
         <AvatarSet
           avatarArr={[{ url: "https://github.com/shadcn.png", fallback: "UT" }]}
+          variant="md"
         />
       </div>
     </footer>
