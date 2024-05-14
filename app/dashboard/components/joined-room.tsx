@@ -12,7 +12,7 @@ import { Activity, AudioWaveform, Dot, Headphones } from "lucide-react"
 import React from "react"
 
 export function JoinedRoomCardDesktop() {
-  const roomJoined = true
+  const roomJoined = false
   return (
     <div className="hidden lg:block sticky top-28 h-full lg:min-w-[280px]">
       {roomJoined ? (

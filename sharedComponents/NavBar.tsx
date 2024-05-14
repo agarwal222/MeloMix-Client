@@ -6,7 +6,7 @@ import { iconFill } from "@/constants/colors"
 
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-50 w-full px-16 py-5 flex flex-row justify-between items-center bg-background/65 backdrop-blur-lg lg:bg-background lg:backdrop-blur-0">
+    <header className="sticky top-0 z-50 w-full px-7 lg:px-16 py-5 flex flex-row justify-between items-center bg-background/65 backdrop-blur-lg lg:bg-background lg:backdrop-blur-0">
       <div className="flex flex-row" id="logo">
         <h1 className="text-2xl font-bold">MeloMix</h1>
       </div>
@@ -32,7 +32,7 @@ export default function NavBar() {
           />
           <Bell fill={iconFill} stroke={iconFill} size={24} />
         </div>
-        <div className="w-full max-w-2xl" id="avatar">
+        <div className="hidden lg:block w-full max-w-2xl" id="avatar">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>UT</AvatarFallback>
