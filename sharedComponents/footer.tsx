@@ -13,7 +13,7 @@ export default function Footer() {
         <Radio size={24} stroke={iconFill} />
         <CreateRoomDialog
           button={
-            <Button variant="link" className="p-0">
+            <Button variant="link" className="p-0 h-0">
               <DiamondPlus size={24} stroke={iconFill} />
             </Button>
           }

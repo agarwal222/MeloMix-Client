@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Bell, Search } from "lucide-react"
 import { iconFill } from "@/constants/colors"
 import AvatarSet from "./avatar-set"
+import UserPopover from "./user-popover"
 
 export default function NavBar() {
   return (
@@ -32,11 +33,16 @@ export default function NavBar() {
           <Bell fill={iconFill} stroke={iconFill} size={24} />
         </div>
         <div className="hidden lg:block w-full max-w-2xl" id="avatar">
-          <AvatarSet
-            avatarArr={[
-              { url: "https://github.com/shadcn.png", fallback: "UT" },
-            ]}
-            variant="lmd"
+          <UserPopover
+            trigger={
+              <AvatarSet
+                className="cursor-pointer"
+                avatarArr={[
+                  { url: "https://github.com/shadcn.png", fallback: "UT" },
+                ]}
+                variant="lmd"
+              />
+            }
           />
         </div>
       </div>

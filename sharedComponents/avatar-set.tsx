@@ -1,9 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import React from "react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { cn } from "@/lib/utils"
 
 interface AvatarSetProps {
   variant?: Variant
   avatarArr: AvatarArr[]
+  className?: string
 }
 
 type Variant = "xl" | "lg" | "lmd" | "md" | "sm"
@@ -13,7 +15,11 @@ type AvatarArr = {
   fallback: string
 }
 
-export default function AvatarSet({ variant, avatarArr }: AvatarSetProps) {
+export default function AvatarSet({
+  variant,
+  avatarArr,
+  className,
+}: AvatarSetProps) {
   const w =
     variant === "xl"
       ? 80
@@ -37,7 +43,7 @@ export default function AvatarSet({ variant, avatarArr }: AvatarSetProps) {
   if (avatarArr.length === 1) {
     return (
       <Avatar
-        className="w-5 h-5 rounded-full shadow-md"
+        className={cn("w-5 h-5 rounded-full shadow-md", className)}
         style={{ height: h, width: w }}
       >
         <AvatarImage src={avatarArr[0].url} alt={avatarArr[0].fallback} />
@@ -50,9 +56,12 @@ export default function AvatarSet({ variant, avatarArr }: AvatarSetProps) {
       {avatarArr.map((avatar, i) => (
         <Avatar
           key={i}
-          className={`w-5 h-5 rounded-full ${
-            i === avatarArr.length - 1 ? "" : "-ml-4"
-          } shadow-md border-2 border-card-border`}
+          className={cn(
+            `w-5 h-5 rounded-full ${
+              i === avatarArr.length - 1 ? "" : "-ml-4"
+            } shadow-md border-2 border-card-border`,
+            className
+          )}
           style={{ height: h, width: w }}
         >
           <AvatarImage src={avatar.url} alt={avatar.fallback} />
