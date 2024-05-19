@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import {
   Popover,
@@ -7,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Bug, CircleHelp, Settings, UserRound } from "lucide-react"
 import Link from "next/link"
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs"
 
 type UserPopoverProps = {
   trigger: React.ReactNode
@@ -51,14 +53,14 @@ export default function UserPopover({ trigger }: UserPopoverProps) {
             <Link href="/dashboard/profile">Report a bug</Link>
           </Button>
         </div>
-        <Button
-          className="gap-2.5 justify-start text-text-primary focus-visible:ring-0 focus-visible:ring-offset-0 bg-card-foreground"
-          variant="link"
-        >
-          <Link className="p-4" href="/dashboard/profile">
+        <LogoutLink className="flex flex-col justify-start">
+          <Button
+            className="gap-2.5 justify-start text-text-primary focus-visible:ring-0 focus-visible:ring-offset-0 bg-card-foreground"
+            variant="link"
+          >
             Log Out
-          </Link>
-        </Button>
+          </Button>
+        </LogoutLink>
       </PopoverContent>
     </Popover>
   )

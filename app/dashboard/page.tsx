@@ -1,11 +1,13 @@
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { DiamondPlus } from "lucide-react"
-import React from "react"
 import RoomCard from "./components/room-card"
 import { JoinedRoomCardMobile } from "./components/joined-room"
 import CreateRoomDialog from "@/sharedComponents/createRoom/create-room-dialog"
 
-export default function Dashboard() {
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+
+export default async function Dashboard() {
   return (
     <div className="grow shrink-1 md:px-7 lx:px-14">
       <div className="hidden sticky bg-background z-50 top-[81px] py-5 md:flex flex-row justify-between items-center">

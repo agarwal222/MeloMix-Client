@@ -5,6 +5,13 @@ import NavBar from "../sharedComponents/NavBar"
 import { ThemeProvider } from "@/components/theme-provider"
 import GlobuleProvider from "@/context/useGlobule"
 import Footer from "@/sharedComponents/footer"
+// import SigninPopover from "@/sharedComponents/signin-popover"
+import dynamic from "next/dynamic"
+
+const SigninPopover = dynamic(
+  () => import("@/sharedComponents/signin-popover"),
+  { ssr: false }
+)
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -28,6 +35,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <SigninPopover />
             <NavBar />
             {children}
             <Footer />
