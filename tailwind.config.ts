@@ -58,6 +58,9 @@ const config = {
           primary: "hsl(var(--text-primary))",
           secondary: "hsl(var(--text-secondary))",
         },
+        link: {
+          secondary: "hsl(var(--link-secondary))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
